@@ -139,7 +139,7 @@ export const BrainrotCard = memo(function BrainrotCard({
     mut && "bd-mutated",
   )
   const style = {
-    background: `radial-gradient(120% 80% at 50% 0%, ${mut ? mut.color + "88" : t.glow}, transparent 65%), linear-gradient(180deg,#1f1638,#130c24)`,
+    background: `radial-gradient(120% 80% at 50% 0%, ${mut ? mut.color + "88" : t.glow}, transparent 65%), var(--bd-card-bg)`,
     contain: "layout paint",
     ...(mut ? { borderColor: mut.color } : {}),
   } as const
@@ -195,7 +195,7 @@ export function DropCard({ drop, chance, compact }: { drop: Drop; chance?: numbe
   return (
     <div
       className="relative flex flex-col items-center overflow-hidden rounded-2xl border border-white/8 p-2"
-      style={{ background: "radial-gradient(120% 80% at 50% 0%, rgba(255,200,61,.35), transparent 65%), linear-gradient(180deg,#1f1638,#130c24)" }}
+      style={{ background: "radial-gradient(120% 80% at 50% 0%, rgba(255,200,61,.35), transparent 65%), var(--bd-card-bg)" }}
     >
       <span className="absolute inset-x-0 bottom-0 h-1 bg-[var(--bd-gold)]" />
       <div className="flex w-full items-center justify-between">

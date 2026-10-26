@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
 import { Box, ChevronRight, Crown, Dices, Ellipsis, EyeOff, GraduationCap, Megaphone, Plus, Rocket, Settings, Ticket, TrendingUp, User, X } from 'lucide-react'
-import logo from '@/assets/brainrotdice-logo.webp'
+import logo from '@/assets/logo-neon.png'
 import meowlGuide from "@/assets/meowl-halloween.png"
 import { HalloweenEvent, HalloweenFX } from "@/components/casino/Halloween"
 import { Onboarding } from '@/components/casino/Onboarding'
@@ -261,7 +261,7 @@ function SettingsSheet({ onClose }: { onClose: () => void }) {
 function Header({ onDeposit, onMenu }: { onDeposit: () => void; onMenu: () => void }) {
   const { balance } = useStore()
   return (
-    <header className="sticky top-0 z-40 border-b border-white/6 bg-[#0b0610]/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-white/6 bd-header backdrop-blur-md">
       <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-4 py-3">
         <div className="flex items-center gap-2.5">
           <button type="button" onClick={onMenu} className="bd-dots" aria-label="Открыть меню">
@@ -321,7 +321,7 @@ function CornerMenu({
           {user.photoUrl ? (
             <img src={user.photoUrl} alt="" className="size-14 shrink-0 rounded-2xl object-cover ring-2 ring-white/30" />
           ) : (
-            <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-violet-700 font-heading text-xl font-extrabold ring-2 ring-white/30">
+            <span className="grid size-14 shrink-0 place-items-center rounded-2xl bd-avatar font-heading text-xl font-extrabold ring-2 ring-white/30">
               {user.firstName.slice(0, 1)}
             </span>
           )}
@@ -368,7 +368,7 @@ function BattlePassPromo({ onOpen }: { onOpen: () => void }) {
     LEVELS.reduce((n, l) => n + (['free', 'premium'] as const).filter((t) => canClaimLevel(t, l.level, bp) === 'ok').length, 0)
   return (
     <button type="button" onClick={onOpen} className="bd-bp-hero mt-4 flex w-full items-center gap-3 !p-3 text-left">
-      <img src="/img/battlepass.webp" alt="" className="size-14 shrink-0 object-contain" loading="lazy" />
+      <img src="/img/battlepass.png" alt="" className="size-14 shrink-0 object-contain" loading="lazy" />
       <span className="min-w-0 flex-1">
         <span className="block font-heading text-sm font-extrabold">Батл пасс</span>
         <span className="block text-[11px] text-white/60">{`Уровень ${levelFromXp(bp.xp)} · квесты дают XP`}</span>

@@ -84,7 +84,7 @@ export function BattlePassView() {
             <h1 className="font-heading text-2xl font-extrabold leading-tight">Батл пасс</h1>
             <p className="mt-0.5 text-[11px] text-white/60">Квесты дают XP, XP поднимает уровень.</p>
           </div>
-          <img src="/img/battlepass.webp" alt="" className="bd-float size-16 shrink-0 object-contain" />
+          <img src="/img/battlepass.png" alt="" className="bd-float size-16 shrink-0 object-contain" />
         </div>
         <div className="relative mt-4">
           <div className="mb-1.5 flex items-center justify-between text-[11px] font-bold">
