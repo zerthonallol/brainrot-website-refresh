@@ -28,3 +28,4 @@
 - The free case requires a Telegram channel subscription verified server-side via Bot API getChatMember (src/lib/subscription.functions.ts). Why: client-side checks are trivially bypassed; the bot must be a channel admin.
 - Case covers are `/img/cases/<id>-v2.webp` chest art with the case's star brainrot baked in and its own white sticker outline, so tiles must not add the `.bd-sticker` outline or peek extra brainrots. Why: covers were redrawn as one Steal a Brainrot style set.
 - The beginner tour (src/components/casino/Onboarding.tsx) opens once per device (localStorage `brainrotdice:tour-done`) and is reopened from the corner menu and hero. Why: newcomers see it without a backend change; existing `brainrotdrop:*` storage keys stay so old saves load.
+- Visual theme ("Neon Arcade") is the last override block in src/styles.css; restyle there instead of editing earlier bd-*/hw-* rules. Case covers and brainrot images (incl. Meowl) are never replaced.
